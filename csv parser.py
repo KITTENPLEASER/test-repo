@@ -9,7 +9,7 @@ def timer_function(func):
         print(f'Функция была завершена. Время выполнения: {end - start}мс')
         return result
     return wrapper
-# TEST TEST TEST
+
 @timer_function
 def parse_csv(filename: str):
     data = []
@@ -20,7 +20,6 @@ def parse_csv(filename: str):
             data.append(dict(zip(data_keys, data_element)))
     return data
 
-print('Hello, GIT!')
 print(parse_csv('data.csv'))
 
 
